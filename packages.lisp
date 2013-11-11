@@ -6,7 +6,7 @@
 (in-package :cl-user)
 
 (defpackage #:black-stone
-    (:nicknames #:qcl)
+    (:nicknames #:qclambda)
     (:use :cl)
     (:export #:*black-stone-version*))
 

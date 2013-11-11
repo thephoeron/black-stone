@@ -13,7 +13,7 @@
 
 (defparameter *black-stone-version* "0.0.1")
 
-(defsystem silver-sword
+(defsystem black-stone
   :version #.*black-stone-version*
   :author "\"the Phoeron\" Colin J.E. Lupton <sysop@thephoeron.com>"
   :license "MIT"
@@ -30,6 +30,9 @@
                              (:file "decompose")
                              (:file "dynamic-lifting")
                              (:file "gate-decomposition")))
+               (:module "qclambda"
+               	:serial t
+               	:components ((:file "qclambda")))
                (:file "black-stone")))
 
 ;; EOF
