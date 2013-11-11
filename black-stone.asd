@@ -31,8 +31,20 @@
                              (:file "dynamic-lifting")
                              (:file "gate-decomposition")))
                (:module "qclambda"
-               	:serial t
-               	:components ((:file "qclambda")))
+                :serial t
+                :components ((:file "circ-lifting")
+                             (:file "circuit")
+                             (:file "classical")
+                             (:file "control")
+                             (:file "generic")
+                             (:file "internal")
+                             (:file "labels")
+                             (:file "printing")
+                             (:file "qtypes")
+                             (:file "qdata")
+                             (:file "qobjects")
+                             (:file "transformer")
+                             (:file "qclambda")))
                (:file "black-stone")))
 
 ;; EOF
