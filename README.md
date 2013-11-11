@@ -13,8 +13,8 @@ Based on:
 * Quantum Processes, Systems & Information -- Schumacher, Westmoreland
 * Quantum Computer Science -- Mermin
 
-Installation (Linux/OS X)
--------------------------
+Installation & Use (Linux/OS X)
+-------------------------------
 
 Dump the executable:
 
@@ -27,6 +27,13 @@ Install for all users:
 Or if you have a local executable directory on your path:
 
     $ install -v ./black-stone ~/bin
+
+When running from the terminal, it is recommended to use RLWRAP:
+
+    $ rlwrap black-stone
+    ...
+
+    #[BLACK-STONE::QCL-USER]> _
 
 System Requirements
 -------------------
