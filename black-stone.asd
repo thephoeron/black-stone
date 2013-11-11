@@ -7,17 +7,26 @@
 
 (defpackage black-stone-asd
     (:use :cl :asdf)
-    (:export #:*black-stone-version*))
+    (:export #:*black-stone-app-name*
+             #:*black-stone-version*
+             #:*black-stone-version-codename*
+             #:*black-stone-app-banner*))
 
 (in-package :black-stone-asd)
 
+(defparameter *black-stone-app-name* "black-stone")
 (defparameter *black-stone-version* "0.0.1")
+(defparameter *black-stone-version-codename* "Pebble")
+(defparameter *black-stone-app-banner*
+    (format nil "an implementation of Quantum Common Lisp. ~%More information is available at <http://github.com/thephoeron/black-stone/>.~
+        
+        ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty. ~%Copyright (c) 2013 \"the Phoeron\" Colin J.E. Lupton.  Provided under the MIT ~%License.  See LICENSE in the official repo for more information."))
 
 (defsystem black-stone
   :version #.*black-stone-version*
   :author "\"the Phoeron\" Colin J.E. Lupton <sysop@thephoeron.com>"
   :license "MIT"
-  :description "Specification and Implementation of Quantum Common Lisp, for gate-model quantum computers."
+  :description "BLACK-STONE: Specification and Implementation of Quantum Common Lisp, for classical interface gate-model quantum computers."
   :serial t
   :depends-on (:gsll
                :cl-ppcre
