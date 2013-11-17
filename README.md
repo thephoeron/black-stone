@@ -11,7 +11,8 @@ Based on:
 * [Quantum Lambda Calculus](http://www.mathstat.dal.ca/~selinger/papers/#qlambdabook)
 * ["A lambda calculus for quantum computation with classical control](http://www.mathstat.dal.ca/~selinger/papers/#qlambda)
 * [QGAME: Quantum Gate And Measurement Emulator](http://faculty.hampshire.edu/lspector/qgame.html)
-* [Simulation of Quantum Computations in Lisp](ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf)
+* [Q-Lisp Project (Quantum Computer Programming Language)](http://www.schloerconsulting.com/quantum-computer-q-lisp-programming-language) (*not to be confused with QLISP CL Extension for parallel processing*)
+* [Simulation of Quantum Computations in Lisp](ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf) ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf
 * Quantum Processes, Systems & Information -- Schumacher, Westmoreland
 * Quantum Computer Science -- Mermin
 
