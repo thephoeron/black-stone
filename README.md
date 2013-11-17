@@ -3,13 +3,15 @@ BLACK-STONE
 
 Specification and Implementation of Quantum Common Lisp, for classical interface gate-model quantum computers.
 
-Note: due to an unfortunate naming conflict with Omer's QCL, a quantum programming language based on the syntax of C, we will generally refer to Quantum Common Lisp as (qcλ), or qclambda in the source.
+Note: due to an unfortunate naming conflict with Omer's QCL, a quantum programming language based on the syntax of C, we will generally refer to Quantum Common Lisp as *(qcλ)*, or `qclambda` in the source.
 
 Based on:
 
 * [Quipper, embedded, scalable pure functional language for quantum computation](http://www.mathstat.dal.ca/~selinger/quipper/)
 * [Quantum Lambda Calculus](http://www.mathstat.dal.ca/~selinger/papers/#qlambdabook)
 * ["A lambda calculus for quantum computation with classical control](http://www.mathstat.dal.ca/~selinger/papers/#qlambda)
+* [QGAME: Quantum Gate And Measurement Emulator](http://faculty.hampshire.edu/lspector/qgame.html)
+* [Simulation of Quantum Computations in Lisp](ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf)
 * Quantum Processes, Systems & Information -- Schumacher, Westmoreland
 * Quantum Computer Science -- Mermin
 
@@ -34,6 +36,10 @@ When running from the terminal, it is recommended to use RLWRAP:
     ...
 
     #[BLACK-STONE::QCL-USER]> _
+
+This will provide you with an improved line-editing environment over the underlying SBCL REPL.
+
+Full shell integration is also provided through UBER-SHELL.
 
 System Requirements
 -------------------
