@@ -33,6 +33,21 @@
                :cl-fad
                :let-over-lambda)
   :components ((:file "packages")
+               (:module "qclambda"
+                :serial t
+                :components ((:file "qtypes")
+                             (:file "circuit")
+                             (:file "classical")
+                             (:file "control")
+                             (:file "generic")
+                             (:file "internal")
+                             (:file "labels")
+                             (:file "printing")
+                             (:file "qdata")
+                             (:file "qobjects")
+                             (:file "circ-lifting")
+                             (:file "transformer")
+                             (:file "qclambda")))
                (:module "lib"
                 :serial t
                 :components ((:file "arithmetic")
@@ -55,21 +70,6 @@
                              (:file "synthesis")
                              (:file "unboxing")
                              (:file "classical-optimization")))
-               (:module "qclambda"
-                :serial t
-                :components ((:file "circ-lifting")
-                             (:file "circuit")
-                             (:file "classical")
-                             (:file "control")
-                             (:file "generic")
-                             (:file "internal")
-                             (:file "labels")
-                             (:file "printing")
-                             (:file "qtypes")
-                             (:file "qdata")
-                             (:file "qobjects")
-                             (:file "transformer")
-                             (:file "qclambda")))
                (:file "black-stone")))
 
 ;; EOF
