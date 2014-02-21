@@ -47,7 +47,7 @@ System Requirements
 
 Tested on Linux x86_64 and OS X 10.7
 
-* SBCL 1.1.10+
+* SBCL 1.1.14+
 * Quicklisp
 
 Dependencies
