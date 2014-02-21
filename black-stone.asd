@@ -18,9 +18,15 @@
 (defparameter *black-stone-version* "0.0.1")
 (defparameter *black-stone-version-codename* "Pebble")
 (defparameter *black-stone-app-banner*
-    (format nil "an implementation of Quantum Common Lisp. ~%More information is available at <http://github.com/thephoeron/black-stone/>.~
+    (format nil "an implementation of Quantum Common Lisp.~
+                ~%More information is available at <http://github.com/thephoeron/black-stone/>.~
+                ~%Powered by ~A v~A.~
         
-        ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty. ~%Copyright (c) 2013--2014 \"the Phoeron\" Colin J.E. Lupton.  Provided under the MIT ~%License.  See LICENSE in the official repo for more information."))
+                ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty.~
+                ~%Copyright (c) 2013--2014 \"the Phoeron\" Colin J.E. Lupton.  Provided under the~
+                ~%MIT License.  See LICENSE in the official repo for more information."
+            (lisp-implementation-type)
+            (lisp-implementation-version)))
 
 (defsystem black-stone
   :version #.*black-stone-version*

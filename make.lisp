@@ -48,7 +48,7 @@
     :description "Print version number and exit.")))
 
 (defun app-version ()
-  (format t "~A: v~A \"~A\"~%" *app-title* *app-version* *app-codename*))
+  (format t "~%~A: v~A \"~A\"~%" *app-title* *app-version* *app-codename*))
 
 (defun signal-handler (signal)
   (format t "~A received~%" signal)
@@ -61,13 +61,15 @@
   ;; explicitly launch the help menu if it's called from command-line
   (when (getopt :short-name "h")
     (help)
+    (terpri)
     (clon::exit)) ;; since we shadowed CLON's (exit), we need to refer to it explicitly
   (when (getopt :short-name "v")
     (app-version)
+    (terpri)
     (clon::exit))
   (if (getopt :short-name "q")
   	  (app-version)
-  	  (format t "This is ~A v~A \"~A\", ~A~%" *app-title* *app-version* *app-codename* *app-banner*))
+  	  (format t "~%This is ~A v~A \"~A\", ~A~%" *app-title* *app-version* *app-codename* *app-banner*))
   ;; customize prompt and enter BLACK-STONE REPL
   (setf sb-int:*repl-prompt-fun*
         (lambda (stream)
