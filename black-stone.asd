@@ -43,6 +43,7 @@
                 :serial t
                 :components ((:file "qtypes")
                              (:file "circuit")
+                             (:file "oracles")
                              (:file "classical")
                              (:file "control")
                              (:file "generic")

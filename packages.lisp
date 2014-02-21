@@ -10,7 +10,48 @@
   (:export #:*black-stone-app-name*
            #:*black-stone-version*
            #:*black-stone-version-codename*
-           #:*black-stone-app-banner*))
+           #:*black-stone-app-banner*
+           ; qtypes.lisp
+           #:quantum-system
+           ; circuit.lisp
+           #:set-address-components
+           #:map-qubit-combinations
+           #:get-addressed-amplitude
+           #:set-addressed-amplitude
+           #:matrix-multiply
+           #:extract-column
+           #:install-column
+           #:apply-operator
+           #:qc-output-probabilities
+           #:multi-qsys-output-probabilities
+           #:expected-oracles
+           ; oracles.lisp
+           #:binary-operator-matrix
+           #:oracle
+           #:limited-oracle
+           ; generic.lisp
+           #:qnot
+           #:cnot
+           #:srn
+           #:nand
+           #:hadamard
+           #:u-theta
+           #:cphase
+           #:u2
+           #:swap
+           #:printamps
+           #:insp
+           ; internal.lisp
+           #:end
+           #:distance-to-next-unmatched-end
+           #:without-if-branch
+           #:without-else-branch
+           #:force-to
+           ; qclambda.lisp
+           #:*post-oracle-measurements*
+           #:run-qsys
+           #:execute-quantum-program
+           #:test-quantum-program))
 
 ;; see asdf system definition
 (defvar black-stone:*black-stone-app-name*
