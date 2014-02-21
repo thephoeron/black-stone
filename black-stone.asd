@@ -1,6 +1,6 @@
 ;;;; -*- Mode: LISP; Syntax: COMMON-LISP; Package: BLACK-STONE; Base: 10 -*- file: black-stone.asd
 
-;;;; Copyright (c) 2013 "the Phoeron" Colin J.E. Lupton <//thephoeron.com>
+;;;; Copyright (c) 2013--2014 "the Phoeron" Colin J.E. Lupton <//thephoeron.com>
 ;;;; See LICENSE for additional information.
 
 (in-package :cl-user)
@@ -20,7 +20,7 @@
 (defparameter *black-stone-app-banner*
     (format nil "an implementation of Quantum Common Lisp. ~%More information is available at <http://github.com/thephoeron/black-stone/>.~
         
-        ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty. ~%Copyright (c) 2013 \"the Phoeron\" Colin J.E. Lupton.  Provided under the MIT ~%License.  See LICENSE in the official repo for more information."))
+        ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty. ~%Copyright (c) 2013--2014 \"the Phoeron\" Colin J.E. Lupton.  Provided under the MIT ~%License.  See LICENSE in the official repo for more information."))
 
 (defsystem black-stone
   :version #.*black-stone-version*

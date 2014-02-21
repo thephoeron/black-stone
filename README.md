@@ -55,6 +55,8 @@ Dependencies
 
 Available through Quicklisp:
 
+* LET-OVER-LAMBDA
+* CL-ISAAC
 * GSLL
 * CL-PPCRE
 * CL-FAD
@@ -62,6 +64,4 @@ Available through Quicklisp:
 
 Other libraries on GitHub (clone into ~/quicklisp/local-projects/)
 
-* [LET-OVER-LAMBDA](https://github.com/thephoeron/let-over-lambda)
-* [CL-ISAAC](https://github.com/thephoeron/cl-isaac)
 * [UBER-SHELL](https://github.com/thephoeron/uber-shell)
