@@ -64,19 +64,6 @@
                      ))
    (list q)))
 
-; (defun cphase-old (qsys q1 q2 alpha)
-;   "Quantum conditional phase gate, OLD VERSION"
-;   (apply-operator
-;    qsys 
-;    (make-array '(4 4)
-;                :initial-contents 
-;                (list (list 1 0 0 0)
-;                      (list 0 1 0 0)
-;                      (list 0 0 0 (exp (* (sqrt -1.0L0) alpha)))
-;                      (list 0 0 (exp (- (* (sqrt -1.0L0) alpha))) 0)
-;                      ))
-;    (list q1 q2)))
-
 (defun cphase (qsys q1 q2 alpha)
   "Quantum conditional phase gate"
   (apply-operator
@@ -89,7 +76,6 @@
                      (list 0 0 0 (exp (* (sqrt -1.0L0) alpha)))
                      ))
    (list q1 q2)))
-
 
 ;; U(2) =  U(phi) * R(theta) * U(psi) * exp(i alpha)I
 ;; where  U(a) = e^(-ia) 0
