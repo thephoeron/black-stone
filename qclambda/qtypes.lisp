@@ -36,6 +36,13 @@
                   (beta qubit))))
     state))
 
+;; Basic Coupler
+;; -- used by some Quantum systems
+(defclass quantum-coupler ()
+  ((energy :initarg :energy :initform 0 :accessor energy)
+   (node-a :initarg :node-a :initform 0 :accessor node-a)
+   (node-b :initarg :node-b :initform 0 :accessor node-b)))
+
 ;; Basic Quantum Computer system
 ;; -- add slot QUBIT-LIST to track list of QUBIT instances
 ;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
