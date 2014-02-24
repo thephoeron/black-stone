@@ -7,7 +7,38 @@
 
 ;; We define the quantum data types as CLOS classes
 
-; Basic Quantum Computer system
+;; Basic Qubit
+;; -- to be integrated in QUANTUM-SYSTEM
+;; -- each QUBIT instance in slot QUBIT-LIST can be treated individually or as part of system
+;; -- will cost additional overhead, but necessary for features such as entanglements of qubits
+;;    and arbitrary Q-REGs
+(defclass qubit ()
+  ((alpha :initarg :alpha :initform 0.0L0 :accessor alpha)
+   (beta :initarg :beta :initform 1.0L0 :accessor beta)
+   (pure-state :initarg :pure-state :initform nil :accessor pure-state)))
+
+(defmethod initialize-instance :after ((qubit qubit) &rest args)
+  (declare (ignore args))
+  ; |0> + i|1>/(sqrt 2)
+  (let* ((i (sqrt -1))
+         (state (/ (+ (alpha qubit)
+                      (* i (beta qubit)))
+                   (sqrt 2))))
+    (setf (pure-state qubit) state)))
+
+(defgeneric qubit-state (qubit)
+  (:documentation "Linear superposition of basis states"))
+
+;; adds probability amplitudes ALPHA and BETA, returns resulting STATE
+(defmethod qubit-state ((qubit qubit) &rest args)
+  (declare (ignore args))
+  (let ((state (+ (alpha qubit)
+                  (beta qubit))))
+    state))
+
+;; Basic Quantum Computer system
+;; -- add slot QUBIT-LIST to track list of QUBIT instances
+;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
 (defclass quantum-system ()
   ((number-of-qubits :initarg :number-of-qubits :accessor number-of-qubits 
                      :documentation "The Number of Qubits in the quantum computer system.")
