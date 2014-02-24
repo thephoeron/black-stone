@@ -66,11 +66,13 @@
 (defvar black-stone:*black-stone-app-banner*
   #.black-stone-asd:*black-stone-app-banner*)
 
+;; Shadow relevant Common Lisp symbols with Quantum equivalents
 (defpackage #:quantum-common-lisp
   (:nicknames #:qcl)
   (:use :cl :black-stone)
   (:export))
 
+;; Set up a user namespace and shadow functionality from SBCL contrib libs
 (defpackage #:quantum-common-lisp-user
   (:nicknames #:qcl-user)
   (:use :cl :cl-user :sb-ext :qcl :black-stone)

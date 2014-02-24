@@ -20,7 +20,7 @@
 (defparameter *black-stone-app-banner*
     (format nil "an implementation of Quantum Common Lisp.~
                 ~%More information is available at <http://github.com/thephoeron/black-stone/>.~
-                ~%Powered by ~A v~A.~
+                ~%Powered by ~A v~A <http://www.sbcl.org/>.~
         
                 ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty.~
                 ~%Copyright (c) 2013--2014 \"the Phoeron\" Colin J.E. Lupton.  Provided under the~
@@ -37,7 +37,8 @@
   :depends-on (:gsll
                :cl-ppcre
                :cl-fad
-               :let-over-lambda)
+               :let-over-lambda
+               :cl-isaac)
   :components ((:file "packages")
                (:module "qclambda"
                 :serial t
