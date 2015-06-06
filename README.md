@@ -1,5 +1,6 @@
-BLACK-STONE
-===========
+# BLACK-STONE
+
+[![Build Status](https://travis-ci.org/thephoeron/black-stone.svg)](https://travis-ci.org/thephoeron/black-stone)
 
 Specification and Implementation of Quantum Common Lisp, for classical interface gate-model quantum computers.
 
