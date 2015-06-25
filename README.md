@@ -1,6 +1,8 @@
 # BLACK-STONE
 
 [![Build Status](https://travis-ci.org/thephoeron/black-stone.svg)](https://travis-ci.org/thephoeron/black-stone)
+[![Not Available in Quicklisp](https://img.shields.io/badge/quicklisp-not--available-red.svg)](https://quicklisp.org/)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 Specification and Implementation of Quantum Common Lisp, for classical interface gate-model quantum computers.
 
