@@ -12,7 +12,7 @@ env:
     - LISP=clisp32
     - LISP=ecl
     - LISP=abcl
-    - LISP=allegro
+    # - LISP=allegro
     - LISP=cmucl
 
 matrix:
@@ -22,7 +22,7 @@ matrix:
     - env: LISP=clisp
     - env: LISP=clisp32
     - env: LISP=cmucl
-    - env: LISP=allegro
+    # - env: LISP=allegro
     - env: LISP=ecl
     - env: LISP=abcl
 
