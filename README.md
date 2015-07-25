@@ -66,3 +66,7 @@ Available through Quicklisp:
 * CL-PPCRE
 * CL-FAD
 * CLON (the Command-Line Options Nuker)
+
+## License
+
+Copyright &copy; 2013--2015, "the Phoeron" Colin J.E. Lupton.  This project has been released under the MIT License; please see `black-stone/LICENSE` for more information.
