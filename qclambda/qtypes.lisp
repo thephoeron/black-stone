@@ -26,7 +26,7 @@
                    (sqrt 2))))
     (setf (pure-state qubit) state)))
 
-(defgeneric qubit-state (qubit)
+(defgeneric qubit-state (qubit &rest args)
   (:documentation "Linear superposition of basis states"))
 
 ;; adds probability amplitudes ALPHA and BETA, returns resulting STATE
@@ -47,11 +47,11 @@
 ;; -- add slot QUBIT-LIST to track list of QUBIT instances
 ;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
 (defclass quantum-system ()
-  ((number-of-qubits :initarg :number-of-qubits :accessor number-of-qubits 
+  ((number-of-qubits :initarg :number-of-qubits :accessor number-of-qubits
                      :documentation "The Number of Qubits in the quantum computer system.")
-   (amplitudes :initarg :amplitudes :initform nil :accessor amplitudes 
+   (amplitudes :initarg :amplitudes :initform nil :accessor amplitudes
                :documentation "An array of amplitudes.")
-   (prior-probability :initarg :prior-probability :initform 1 :accessor prior-probability 
+   (prior-probability :initarg :prior-probability :initform 1 :accessor prior-probability
                       :documentation "The probability of reaching this system in the first place.")
    (oracle-count :initarg :oracle-count :initform 0 :accessor oracle-count
                  :documentation "The number of oracle calls that have been made in the history of this system.")
