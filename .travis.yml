@@ -26,6 +26,10 @@ matrix:
     - env: LISP=ecl
     - env: LISP=abcl
 
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y libgsl0-dev libffi-dev
+
 install:
   - if [ -x ./install.sh ] && head -2 ./install.sh | grep '^# cl-travis' > /dev/null;
     then
