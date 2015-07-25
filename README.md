@@ -10,6 +10,8 @@ Specification and Implementation of Quantum Common Lisp, for classical interface
 
 Note: due to an unfortunate naming conflict with Omer's QCL, a quantum programming language based on the syntax of C, we will generally refer to Quantum Common Lisp as *(qcλ)*, or `qclambda` in the source.
 
+Documentation available at: http://thephoeron.viewdocs.io/black-stone
+
 Based on:
 
 * [Quipper, embedded, scalable pure functional language for quantum computation](http://www.mathstat.dal.ca/~selinger/quipper/)
@@ -45,8 +47,6 @@ When running from the terminal, it is recommended to use RLWRAP:
 
 This will provide you with an improved line-editing environment over the underlying SBCL REPL.
 
-Full shell integration is also provided through UBER-SHELL.
-
 System Requirements
 -------------------
 
@@ -66,7 +66,3 @@ Available through Quicklisp:
 * CL-PPCRE
 * CL-FAD
 * CLON (the Command-Line Options Nuker)
-
-Other libraries on GitHub (clone into ~/quicklisp/local-projects/)
-
-* [UBER-SHELL](https://github.com/thephoeron/uber-shell)
