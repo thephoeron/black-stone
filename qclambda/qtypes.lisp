@@ -47,7 +47,7 @@
 ;; -- add slot QUBIT-LIST to track list of QUBIT instances
 ;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
 (defclass quantum-system ()
-  ((number-of-qubits :initarg :number-of-qubits :accessor number-of-qubits
+  ((number-of-qubits :initarg :number-of-qubits :initform 0 :accessor number-of-qubits
                      :documentation "The Number of Qubits in the quantum computer system.")
    (amplitudes :initarg :amplitudes :initform nil :accessor amplitudes
                :documentation "An array of amplitudes.")
