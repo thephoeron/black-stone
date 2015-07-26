@@ -3,6 +3,7 @@
 [![Join the chat at https://gitter.im/thephoeron/black-stone](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/thephoeron/black-stone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://travis-ci.org/thephoeron/black-stone.svg)](https://travis-ci.org/thephoeron/black-stone)
+[![Coverage Status](http://coveralls.io/repos/thephoeron/black-stone/badge.svg?branch=master&service=github)](http://coveralls.io/github/thephoeron/black-stone?branch=master)
 [![Not Available in Quicklisp](https://img.shields.io/badge/quicklisp-not%20available-red.svg)](https://quicklisp.org/)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
