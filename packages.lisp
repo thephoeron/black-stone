@@ -12,6 +12,8 @@
            #:*black-stone-version-codename*
            #:*black-stone-app-banner*
            ; qtypes.lisp
+           #:qubit
+           #:quantum-coupler
            #:quantum-system
            ; circuit.lisp
            #:set-address-components
