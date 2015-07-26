@@ -24,8 +24,7 @@ Based on:
 * Quantum Processes, Systems & Information -- Schumacher, Westmoreland
 * Quantum Computer Science -- Mermin
 
-Installation & Use (Linux/OS X)
--------------------------------
+## Installation & Use (Linux/OS X)
 
 Dump the executable:
 
@@ -48,16 +47,14 @@ When running from the terminal, it is recommended to use RLWRAP:
 
 This will provide you with an improved line-editing environment over the underlying SBCL REPL.
 
-System Requirements
--------------------
+## System Requirements
 
 Tested on Linux x86_64 and OS X 10.7
 
 * SBCL 1.1.14+
 * Quicklisp
 
-Dependencies
-------------
+## Dependencies
 
 Available through Quicklisp:
 
@@ -70,4 +67,4 @@ Available through Quicklisp:
 
 ## License
 
-Copyright &copy; 2013--2015, "the Phoeron" Colin J.E. Lupton.  This project has been released under the MIT License; please see `black-stone/LICENSE` for more information.
+Copyright &copy; 2013&ndash;2015, "the Phoeron" Colin J.E. Lupton.  This project has been released under the MIT License; please see `black-stone/LICENSE` for more information.
