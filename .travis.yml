@@ -44,18 +44,18 @@ install:
 script:
   - cl -l prove
        -e '(in-package :cl-user)'
-       -e '#+(and sbcl x86-64) (ql:quickload :cl-coveralls)'
+       -e '#+sbcl (ql:quickload :cl-coveralls)'
        -e '(ql:quickload :black-stone)'
        -e '(setf prove:*debug-on-error* t)'
        -e '(setf *debugger-hook*
                  (lambda (c h)
                    (declare (ignore c h))
                    (uiop:quit -1)))'
-       -e '#+(and sbcl x86-64)
-          (coveralls:with-coveralls (:exclude (list "t"))
+       -e '#+sbcl
+          (coveralls:with-coveralls (:exclude (list "t" "docs"))
              (or (prove:run :black-stone-test)
                  (uiop:quit -1)))'
-       -e '#-(and sbcl x86-64)
+       -e '#-sbcl
            (or (prove:run :black-stone-test)
                (uiop:quit -1))'
 
