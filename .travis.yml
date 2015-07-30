@@ -45,6 +45,7 @@ script:
   - cl -l prove
        -e '(in-package :cl-user)'
        -e '#+sbcl (ql:quickload :cl-coveralls)'
+       -e '(ql:quickload :black-stone)'
        -e '(setf prove:*debug-on-error* t)'
        -e '(setf *debugger-hook*
                  (lambda (c h)
@@ -52,9 +53,10 @@ script:
                    (uiop:quit -1)))'
        -e '#+sbcl
           (coveralls:with-coveralls (:exclude (list "t" "docs"))
-             (ql:quickload :black-stone))'
-       -e '#-sbcl (ql:quickload :black-stone)'
-       -e '(or (prove:run :black-stone-test)
+             (or (prove:run :black-stone-test)
+                 (uiop:quit -1)))'
+       -e '#-sbcl
+           (or (prove:run :black-stone-test)
                (uiop:quit -1))'
 
 notifications:
