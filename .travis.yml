@@ -45,7 +45,6 @@ script:
   - cl -l prove
        -e '(in-package :cl-user)'
        -e '#+sbcl (ql:quickload :cl-coveralls)'
-       # -e '(ql:quickload :black-stone)'
        -e '(setf prove:*debug-on-error* t)'
        -e '(setf *debugger-hook*
                  (lambda (c h)
