@@ -7,17 +7,17 @@
 
 ;; Internal utilities for measurement and branching
 
-(defun end (qsys) 
+(defun end (qsys)
   "Marks the end of a measurement branch; has no effect when used
-in a quantum program in any other context." 
+in a quantum program in any other context."
   qsys)
 
-(defun distance-to-next-unmatched-end (list &optional 
-                                            (num-measures 0) (num-ends 0) 
+(defun distance-to-next-unmatched-end (list &optional
+                                            (num-measures 0) (num-ends 0)
                                             (distance-so-far 0))
   "Returns 0 if there is no unmatched (end) in list; otherwise returns
 the number of instructions to the next unmatched (end) (counting the (end))."
-  (if (null list) 
+  (if (null list)
     0
     (if (eq (caar list) 'end)
       (if (zerop num-measures)
@@ -27,7 +27,7 @@ the number of instructions to the next unmatched (end) (counting the (end))."
                                           (- num-measures 1) (- num-ends 1)
                                           (+ 1 distance-so-far))
           (distance-to-next-unmatched-end (cdr list)
-                                          num-measures (+ num-ends 1) 
+                                          num-measures (+ num-ends 1)
                                           (+ 1 distance-so-far))))
       (if (eq (caar list) 'measure)
         (distance-to-next-unmatched-end (cdr list)
@@ -41,7 +41,7 @@ the number of instructions to the next unmatched (end) (counting the (end))."
   "Assuming that a MEASURE form has just been removed from the given
 program, returns the remainder of the program without the IF (measure-1)
 branch."
-  (let* ((distance-to-first-unmatched-end 
+  (let* ((distance-to-first-unmatched-end
           (distance-to-next-unmatched-end program))
          (distance-from-first-to-second-unmatched-end
           (distance-to-next-unmatched-end
@@ -54,7 +54,7 @@ branch."
         ;; the else never ends
         (subseq program distance-to-first-unmatched-end)
         ;; the else does end
-        (append (subseq program 
+        (append (subseq program
                         distance-to-first-unmatched-end
                         (+ distance-to-first-unmatched-end
                            distance-from-first-to-second-unmatched-end
@@ -67,7 +67,7 @@ branch."
   "Assuming that a MEASURE form has just been removed from the given
 program, returns the remainder of the program without the ELSE (measure-0)
 branch."
-  (let* ((distance-to-first-unmatched-end 
+  (let* ((distance-to-first-unmatched-end
           (distance-to-next-unmatched-end program))
          (distance-from-first-to-second-unmatched-end
           (distance-to-next-unmatched-end
@@ -82,39 +82,7 @@ branch."
         ;; the else does end
         (append (subseq program 0 (- distance-to-first-unmatched-end 1))
                 (subseq program (+ distance-to-first-unmatched-end
-                                   distance-from-first-to-second-unmatched-end
-                                   )))))))
-        
-
-; Test code for without-if-branch and without-else-branch:
-
-; (setq p1 '((foo) (bar) (end) (baz) (bingo) (end) (biff) (boff)))
-; (setq p2 '(  (foo) (bar) 
-;              (measure 0) (blink) (end) (blank) (end) 
-;            (end) 
-;              (baz) (bingo) 
-;              (measure 1) (plonk) (end) (plank) (end)
-;            (end) 
-;            (biff) (boff)))
-; (setq p3 '(  (foo) (bar) 
-;              (measure 0) (blink) (measure 0)(end)(end)(end) (blank) (end) 
-;            (end) 
-;              (baz) (bingo) 
-;              (measure 1) (plonk) (end) (plank) (measure 0)(end)(end)(end)
-;            (end) 
-;            (biff) (boff)))
-
-; (without-if-branch p1)
-; (without-if-branch p2)
-; (without-if-branch p3)
-; (without-else-branch p1)
-; (without-else-branch p2)
-; (without-else-branch p3)
-
-
-; (setq p4 '((end) (measure 1) (end) (end) (measure 1) (end)))
-; (without-if-branch p4)
-; (without-else-branch p4)
+                                   distance-from-first-to-second-unmatched-end)))))))
 
 (defun force-to (measured-value qubit qsys)
   "Collapses a quantum system to the provided measured-value for the provided
