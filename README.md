@@ -13,16 +13,19 @@ Note: due to an unfortunate naming conflict with Omer's QCL, a quantum programmi
 
 Documentation available at: http://thephoeron.viewdocs.io/black-stone
 
-Based on:
+## Sources and References
 
-* [Quipper, embedded, scalable pure functional language for quantum computation](http://www.mathstat.dal.ca/~selinger/quipper/)
-* [Quantum Lambda Calculus](http://www.mathstat.dal.ca/~selinger/papers/#qlambdabook)
-* ["A lambda calculus for quantum computation with classical control](http://www.mathstat.dal.ca/~selinger/papers/#qlambda)
+* [Quantum Computation and Quantum Information](), Nielson and Chuang, 2010.
+* [Quantum Algorithms via Linear Algebra](), Lipton and Regan, 2015.
+* [Quantum Information, Computation, and Communication](), Jones and Jaksch, 2012.
+* [Quantum Processes, Systems, and Information](), Schumacher and Westmoreland, 2010.
+* [Quantum Computer Science](), Mermin, 2007.
+* [Quipper, embedded, scalable pure functional language for quantum computation](http://www.mathstat.dal.ca/~selinger/quipper/), Selinger, 2013.
+* [Quantum Lambda Calculus](http://www.mathstat.dal.ca/~selinger/papers/#qlambdabook), Selinger, 2009.
+* ["A lambda calculus for quantum computation with classical control](http://www.mathstat.dal.ca/~selinger/papers/#qlambda), Selinger, 2006.
 * [QGAME: Quantum Gate And Measurement Emulator](http://faculty.hampshire.edu/lspector/qgame.html)
 * [Q-Lisp Project (Quantum Computer Programming Language)](http://www.schloerconsulting.com/quantum-computer-q-lisp-programming-language) (*not to be confused with QLISP CL Extension for parallel processing*)
 * [Simulation of Quantum Computations in Lisp](ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf) ftp://prog.vub.ac.be/tech_report/2006/vub-prog-tr-06-15.pdf
-* Quantum Processes, Systems & Information -- Schumacher, Westmoreland
-* Quantum Computer Science -- Mermin
 
 ## Installation & Use (Linux/OS X)
 
