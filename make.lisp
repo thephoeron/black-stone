@@ -5,6 +5,9 @@
 
 (in-package :cl-user)
 
+;; Deprecate make.lisp
+;; -- move build to black-stone.lisp as part of application
+
 (require :asdf)
  
 ;; We're setting up a clean environment, so we have to specifically tell SBCL where
