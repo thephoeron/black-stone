@@ -7,6 +7,8 @@
 
 ;; Quantum Computer Circuit manipulation utilities
 
+;; convert to methods on QUANTUM-SYSTEMS and QUBITS
+
 (defun set-address-components (qsys count qubits)
   "Sets (amplitude-address qsys) to refer to a particular amplitude, as
 indicated by the bits in the integer count."
