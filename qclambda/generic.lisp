@@ -7,6 +7,8 @@
 
 ;; Generic Gates
 
+;; convert to methods on QUANTUM-REGISTERS and QUBITS
+
 (defun qnot (qsys q)
   "Quantum NOT gate"
   (apply-operator qsys 
