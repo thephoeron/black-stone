@@ -7,6 +7,8 @@
 
 ;; Oracle Gates
 
+;; convert to methods on QUANTUM-SYSTEMS
+
 (defun binary-operator-matrix (tt-right-column)
   "Returns a matrix operator for a binary function with the
 given tt-right-column as the right column of its truth table."
