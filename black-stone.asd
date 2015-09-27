@@ -1,4 +1,5 @@
-;;;; -*- Mode: LISP; Syntax: COMMON-LISP; Package: BLACK-STONE; Base: 10 -*- file: black-stone.asd
+;;;; -*- Mode: LISP; Syntax: COMMON-LISP; Package: BLACK-STONE; Base: 10 -*-
+;;;; file: black-stone.asd
 
 ;;;; Copyright (c) 2013--2015, "the Phoeron" Colin J.E. Lupton <//thephoeron.com>
 ;;;; See LICENSE for additional information.
@@ -23,7 +24,7 @@
                 ~%Powered by ~A v~A <http://www.sbcl.org/>.~
         
                 ~%~%BLACK-STONE is free software, provided as-is, with absolutely no warranty.~
-                ~%Copyright (c) 2013--2014 \"the Phoeron\" Colin J.E. Lupton.  Provided under the~
+                ~%Copyright (c) 2013--2015 \"the Phoeron\" Colin J.E. Lupton.  Provided under the~
                 ~%MIT License.  See LICENSE in the official repo for more information."
             (lisp-implementation-type)
             (lisp-implementation-version)))
