@@ -44,6 +44,27 @@
    (node-a :initarg :node-a :initform 0 :accessor node-a)
    (node-b :initarg :node-b :initform 0 :accessor node-b)))
 
+;; Basic Quantum Register, an ordered, contiguous collection of entangled qubits
+(defclass quantum-register ()
+  ((base-unit :initarg :number-of-qubits :initform 1 :accessor base-unit
+              :documentation "The base unit of the quantum register, i.e., how many qubits are specially entangled for redundancy to be measured as a single classical bit")
+   (cardinality :initarg :cardinality :initform 8 :accessor cardinality
+                :documentation "The size, as a multiple of the base unit of the quantum register.")
+   (qreg :initarg :qreg :initform nil :accessor qreg
+         :documentation "The vector (for linear registers), or array (for complex registers) of qubits.")))
+         
+(defmethod initialize-instance :after ((quantum-register quantum-register) &rest args)
+  "Initializer for Quantum Registers."
+  (if (> (base-unit quantum-register) 1)
+    (setf (qreq quantum-register) (make-array (list (cardinality quantum-register)
+                                                    (base-unit quantum-register))
+                                              :initial-element (make-array (base-unit quantum-register)
+                                                                           :element-type 'qubit
+                                                                           :initial-element (make-instance 'qubit))))
+    (setf (qreg quantum-register) (make-array (cardinality quantum-register)
+                                              :element-type 'qubit
+                                              :initial-element (make-instance 'qubit)))))
+
 ;; Basic Quantum Computer system
 ;; -- add slot QUBIT-LIST to track list of QUBIT instances
 ;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
