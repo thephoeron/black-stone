@@ -68,6 +68,7 @@
 ;; Basic Quantum Computer system
 ;; -- add slot QUBIT-LIST to track list of QUBIT instances
 ;; -- should probably be implemented as a hash-table to store QUBITs to quantum core grid
+;; -- update to support both flat qubits and quantum-registers
 (defclass quantum-system ()
   ((number-of-qubits :initarg :number-of-qubits :initform 0 :accessor number-of-qubits
                      :documentation "The Number of Qubits in the quantum computer system.")
