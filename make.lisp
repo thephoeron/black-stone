@@ -7,7 +7,7 @@
 (in-package :cl-user)
 
 ;; Deprecate make.lisp
-;; -- move build to black-stone.lisp as part of application
+;; -- move build script and CLI to black-stone.lisp as part of application
 
 (require :asdf)
  
