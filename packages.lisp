@@ -15,6 +15,7 @@
            ; qtypes.lisp
            #:qubit
            #:quantum-coupler
+           #:quantum-register
            #:quantum-system
            ; circuit.lisp
            #:set-address-components
