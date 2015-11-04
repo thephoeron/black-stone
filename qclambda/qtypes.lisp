@@ -30,7 +30,7 @@
 (defgeneric qubit-state (qubit &rest args)
   (:documentation "Linear superposition of basis states"))
 
-;; adds probability amplitudes ALPHA and BETA, returns resulting STATE
+;; sum of the probability amplitudes ALPHA and BETA, returns resulting STATE
 (defmethod qubit-state ((qubit qubit) &rest args)
   (declare (ignore args))
   (let ((state (+ (alpha qubit)
@@ -41,8 +41,12 @@
 ;; -- used by some Quantum systems
 (defclass quantum-coupler ()
   ((energy :initarg :energy :initform 0 :accessor energy)
-   (node-a :initarg :node-a :initform 0 :accessor node-a)
-   (node-b :initarg :node-b :initform 0 :accessor node-b)))
+   (node-a :initarg :node-a :initform nil :accessor node-a)
+   (node-b :initarg :node-b :initform nil :accessor node-b)))
+   
+;; initializer for quantum couplers
+;; -- should connect two qubits or two registers
+;; -- distinct feature from a quantum interconnect
 
 ;; Basic Quantum Register, an ordered, contiguous collection of entangled qubits
 (defclass quantum-register ()
