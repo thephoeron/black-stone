@@ -48,6 +48,20 @@
 ;; -- should connect two qubits or two registers
 ;; -- distinct feature from a quantum interconnect
 
+(defmethod initialize-instance :after ((quantum-coupler quantum-coupler) &rest args)
+  "Initializer for Quantum Couplers."
+  (if (and (node-a quantum-coupler)
+           (node-b quantum-coupler))
+    (let ((energy (+ (qubit-state (node-a quantum-coupler))
+                     (qubit-state (node-b quantum-coupler)))))
+      (setf (energy quantum-coupler) energy))
+    (progn
+      (setf (node-a quantum-coupler) (make-instance 'qubit)
+            (node-b quantum-coupler) (make-instance 'qubit))
+      (let ((energy (+ (qubit-state (node-a quantum-coupler))
+                       (qubit-state (node-b quantum-coupler)))))
+        (setf (energy quantum-coupler) energy)))))
+
 ;; Basic Quantum Register, an ordered, contiguous collection of entangled qubits
 (defclass quantum-register ()
   ((base-unit :initarg :number-of-qubits :initform 1 :accessor base-unit
