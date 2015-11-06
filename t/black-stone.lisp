@@ -13,7 +13,7 @@
 
 ;; NOTE: To run this test file, execute `(asdf:test-system :bit-smasher)' in your Lisp.
 
-(plan 3)
+(plan 5)
 
 (deftest sanity-check
   (pass "PROVE is loaded and ready to go.")
@@ -45,6 +45,16 @@
   (is (black-stone::pure-state (make-instance 'qubit))
       #C(0.0 0.7071067932881648)
       "Pure Qubit State: ~#C(0.0 0.71)"))
+
+(deftest quantum-coupler
+  (is-type (make-instance 'quantum-coupler)
+           'quantum-coupler
+           "Quantum Coupler created successfully."))
+
+(deftest quantum-register
+  (is-type (make-instance 'quantum-register)
+           'quantum-register
+           "Quantum Register created successfully."))
 
 (deftest without-branches
   (let ((p1 '((foo)
