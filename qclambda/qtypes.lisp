@@ -74,7 +74,7 @@
 (defmethod initialize-instance :after ((quantum-register quantum-register) &rest args)
   "Initializer for Quantum Registers."
   (if (> (base-unit quantum-register) 1)
-    (setf (qreq quantum-register) (make-array (list (cardinality quantum-register)
+    (setf (qreg quantum-register) (make-array (list (cardinality quantum-register)
                                                     (base-unit quantum-register))
                                               :initial-element (make-array (base-unit quantum-register)
                                                                            :element-type 'qubit
