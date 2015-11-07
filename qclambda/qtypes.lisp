@@ -64,7 +64,7 @@
 
 ;; Basic Quantum Register, an ordered, contiguous collection of entangled qubits
 (defclass quantum-register ()
-  ((base-unit :initarg :number-of-qubits :initform 1 :accessor base-unit
+  ((base-unit :initarg :base-unit :initform 1 :accessor base-unit
               :documentation "The base unit of the quantum register, i.e., how many qubits are specially entangled for redundancy to be measured as a single classical bit")
    (cardinality :initarg :cardinality :initform 8 :accessor cardinality
                 :documentation "The size, as a multiple of the base unit of the quantum register.")
