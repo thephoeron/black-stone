@@ -49,7 +49,13 @@
 (deftest quantum-coupler
   (is-type (make-instance 'quantum-coupler)
            'quantum-coupler
-           "Quantum Coupler created successfully."))
+           "Quantum Coupler created successfully.")
+  (is-type (make-instance 'quantum-coupler :node-a (make-instance 'qubit))
+           'quantum-coupler
+           "Quantum Coupler with one initial qubit created successfully.")
+  (is-type (make-instance 'quantum-coupler :node-a (make-instance 'qubit) :node-b (make-instance 'qubit))
+           'quantum-coupler
+           "Quantum Coupler with two initial qubits created successfully."))
 
 (deftest quantum-register
   (is-type (make-instance 'quantum-register)
