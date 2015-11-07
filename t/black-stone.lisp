@@ -54,7 +54,10 @@
 (deftest quantum-register
   (is-type (make-instance 'quantum-register)
            'quantum-register
-           "Quantum Register created successfully."))
+           "Quantum Register created successfully.")
+  (is-type (make-instance 'quantum-register :base-unit 2)
+           'quantum-register
+           "Quantum Register with ebits base unit created successfully."))
 
 (deftest without-branches
   (let ((p1 '((foo)
