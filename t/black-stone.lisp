@@ -56,7 +56,7 @@
   (is-type (make-instance 'quantum-coupler :node-a (make-instance 'qubit) :node-b (make-instance 'qubit))
            'quantum-coupler
            "Quantum Coupler with two initial qubits created successfully.")
-  (ok (energy (make-instance 'quantum-coupler)))
+  (ok (energy (make-instance 'quantum-coupler))))
 
 (deftest quantum-register
   (is-type (make-instance 'quantum-register)
