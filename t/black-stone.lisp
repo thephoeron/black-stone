@@ -62,9 +62,15 @@
   (is-type (make-instance 'quantum-register)
            'quantum-register
            "Quantum Register created successfully.")
+  (is (cardinality (make-instance 'quantum-register))
+      8
+      "Quantum Register has a cardinality of 8 qubits.")
   (is-type (make-instance 'quantum-register :base-unit 2)
            'quantum-register
-           "Quantum Register with ebits base unit created successfully."))
+           "Quantum Register with ebits base unit created successfully.")
+  (is (cardinality (make-instance 'quantum-register :base-unit 2))
+      8
+      "Quantum Register with ebits base unit has a cardinality of 8 ebits."))
 
 (deftest without-branches
   (let ((p1 '((foo)
