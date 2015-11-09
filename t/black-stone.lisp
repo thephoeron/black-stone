@@ -11,7 +11,7 @@
 
 (in-package :black-stone-test)
 
-;; NOTE: To run this test file, execute `(asdf:test-system :bit-smasher)' in your Lisp.
+;; NOTE: To run this test file, execute `(asdf:test-system :black-stone)' in your Lisp.
 
 (plan 5)
 
