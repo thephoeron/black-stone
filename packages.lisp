@@ -13,7 +13,7 @@
            #:*black-stone-version-codename*
            #:*black-stone-app-banner*
            ; qtypes.lisp
-           #:qubit #:alpha #:beta #:pure-state #:state
+           #:qubit #:alpha #:beta #:pure-state #:qubit-state
            #:quantum-coupler #:energy #:node-a #:node-b
            #:quantum-register #:base-unit #:cardinality #:qreg
            #:quantum-system
