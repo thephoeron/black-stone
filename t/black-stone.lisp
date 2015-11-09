@@ -33,16 +33,16 @@
   (is-type (make-instance 'qubit)
            'qubit
            "Qubit created successfully.")
-  (is (black-stone::qubit-state (make-instance 'qubit))
+  (is (qubit-state (make-instance 'qubit))
       1.0
       "The State of the Qubit is 1.0.")
-  (is (black-stone::alpha (make-instance 'qubit))
+  (is (alpha (make-instance 'qubit))
       0.0
       "Alpha: 0.0")
-  (is (black-stone::beta (make-instance 'qubit))
+  (is (beta (make-instance 'qubit))
       1.0
       "Beta: 1.0")
-  (is (black-stone::pure-state (make-instance 'qubit))
+  (is (pure-state (make-instance 'qubit))
       #C(0.0 0.7071067932881648)
       "Pure Qubit State: ~#C(0.0 0.71)"))
 
