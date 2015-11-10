@@ -6,7 +6,7 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Join the chat at https://gitter.im/thephoeron/black-stone](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/thephoeron/black-stone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Specification and Implementation of Quantum Common Lisp, for classical interface gate-model quantum computers.
+Specification and Implementation of Quantum Common Lisp and the Black Stone Quantum Computer simulator, for modelling classical interface gate-model quantum computer programs.
 
 Note: due to an unfortunate naming conflict with Omer's QCL, a quantum programming language based on the syntax of C, we will generally refer to Quantum Common Lisp as *(qcλ)*, or `qclambda` in the source.
 
